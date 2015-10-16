@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Require-Bundle: com.dynatrace.diagnostics.sdk
+Bundle-Vendor: Dynatrace Community
+Bundle-ClassPath: .,lib/com.dynatrace.diagnostics.sdk.jar
+Bundle-Version: 0.0.1
+Bundle-Name: Guidewire Monitoring Plugin
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.dynatrace.plugin.GuidewirePlugin;singleton:=t
+ rue
+
