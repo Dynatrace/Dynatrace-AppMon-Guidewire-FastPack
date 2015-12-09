@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by dynaTrace Client 6.2.1 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.dynatrace.plugin.GuidewirePlugin" name="Guidewire Monitoring Plugin">
+    <information>
+      <category value="" />
+      <displayname value="Guidewire Monitoring Plugin" />
+      <description value="Pulls stats from Guidewire DB" />
+      <supportlevel value="unsupported" />
+    </information>
+    <configuration>
+      <property key="dbName" label="Database Name" type="string" description="Name of Database Service" default="guidewire" multiline="false" />
+      <property key="sqlPort" label="SQL Port" type="string" description="Port to connect to DB Instance" default="1521" multiline="false" />
+      <property key="authUser" label="Auth User" type="string" description="Oracle User with read rights to GW database" default="perfuser" multiline="false" />
+      <property key="password" label="Auth Password" type="password" description="Password for DB User" default="password" />
+      <property key="timeout" label="Timeout" type="string" description="Maximum time in seconds to wait for result from Database.  Set 0 for no timeout" default="60" multiline="false" />
+      <property key="pcSchema" label="PolicyCenter Schema" type="string" description="Schema/User used in PolicyCenter" default="pc" multiline="false" />
+      <property key="ccSchema" label="ClaimCenter Schema" type="string" description="ClaimCenter Schema/User" default="cc" multiline="false" />
+      <property key="bcSchema" label="BillingCenter Schema" type="string" description="BillingCenter Schema/User" default="bc" multiline="false" />
+    </configuration>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitor" id="com.dynatrace.plugin.GuidewirePlugin.monitor" name="Guidewire Monitor">
+    <plugin configid="com.dynatrace.plugin.GuidewirePlugin" class="com.dynatrace.plugin.GuideWirePlugin" />
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.plugin.GuidewirePlugin.monitor.metricgroup1" name="PolicyCenter Messages">
+    <metricgroup monitorid="com.dynatrace.plugin.GuidewirePlugin.monitor">
+      <metric defaultrate="purepath" name="Number of Messages - Status 1" unit="number" description="Number of Messages with Status 1">
+        <property key="statusCode" value="1" optional="false" />
+      </metric>
+    </metricgroup>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.plugin.GuidewirePlugin.monitor.metricgroup2" name="BillingCenter Messages">
+    <metricgroup monitorid="com.dynatrace.plugin.GuidewirePlugin.monitor">
+      <metric defaultrate="purepath" name="Number of Messages - Status 1" unit="number" description="Number of Messages with Status 1">
+        <property key="statusCode" value="1" optional="false" />
+      </metric>
+    </metricgroup>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.plugin.GuidewirePlugin.monitor.metricgroup3" name="ClaimCenter Messages">
+    <metricgroup monitorid="com.dynatrace.plugin.GuidewirePlugin.monitor">
+      <metric defaultrate="purepath" name="Number of Messages - Status 1" unit="number" description="Number of Messages with Status 1">
+        <property key="statusCode" value="1" optional="false" />
+      </metric>
+    </metricgroup>
+  </extension>
+</plugin>

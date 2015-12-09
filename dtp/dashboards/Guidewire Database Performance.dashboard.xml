@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="6.2.1.1027" date="10/16/15 11:11 AM">
+  <dashboardconfig memento.version="6.2.1.1027" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" localizationenabled="false" sessiontype="live" locationassource="false" suppresssavewarning="false" groupname="" authorname="Richard.Boyd" opendrilldowninnewdashboard="false" sessionid="Guidewire" autoreplacesession="false" modified="2015-10-16T11:11:38-0400" id="33431139-c311-490f-8716-ca586c1a9cef" revision="00000150-7134-d091-8e29-f1d4da76dbda" source="server://dtw124701n02" created="2015-10-16T11:11:38-0400" description="" name="Guidewire Database Performance" modifiedbyname="Richard.Boyd" locationascomparesource="false">
+    <reportconfig lines.per.table="100" pagesize="A4" enabled="true" print.legends="true" orientation="portrait" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" optimizeequalcolumns="true" type="PDF" title="" override="false" levels.per.tree="10" description="" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" print.images="true" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion type="and" />
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion type="applications" mode="all" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" showjavascript="true" type="browserpathtype" />
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern text="" match="contains" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern text="" match="contains" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion type="casuemdimension" />
+      <criterion filterinterval="false" intervalend="0" type="dcrumdimension" intervalstart="0" />
+      <criterion isactive="true" analyzeserverpath="true" type="enduserpath" analyzeenduserpath="true" analyzeclienterrors="false" />
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion type="or" />
+      <criterion enduser="false" type="purepaths" mode="all" />
+      <criterion showrendering="true" isactive="false" contenttypegroupsmode="all" javascripttriggersmode="all" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion includemeasurename="true" includeplatform="true" includetestname="true" type="tests" testcategory="UNIT,BROWSER_TIMER,BROWSER_AUTO_TIMER,PERFORMANCE,LOAD,WEB_API" teststatus="FAILED,INVALIDATED,VOLATILE,DEGRADED,IMPROVED,passed" />
+      <criterion includeplatform="true" type="testsoverview" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+      <criterion type="timeframe">
+        <timeframe start="0" type="Auto" end="9223372036854775807" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern text="" match="contains" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern text="" match="contains" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="DEFAULT" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="org.eclipse.ui.internal.ViewStack@11f6c5d6" selectionindex="0" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="5a963d06-f953-4f42-9725-ee999229bfb9">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" namefontcolor="255,0,0" inherited="false" namefontsize="14" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.53113985" folderid="org.eclipse.ui.internal.ViewStack@6d53f7f" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@11f6c5d6" portletconfigorder="0ca57052-f85c-4758-8049-8fc65ea15ece">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" namefontcolor="255,0,0" inherited="false" namefontsize="14" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.048672568" folderid="org.eclipse.ui.internal.ViewStack@754a0b6f" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@11f6c5d6" portletconfigorder="ccceaf71-eda2-40dc-a74a-46e17406a369">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.39184693" folderid="org.eclipse.ui.internal.ViewStack@5ab6cd7" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@754a0b6f" portletconfigorder="a32d9cbd-d1f5-42f3-94c5-51a0f4f1ee34">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.6621067" folderid="org.eclipse.ui.internal.ViewStack@2bd2da94" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@5ab6cd7" portletconfigorder="293855f5-9834-4076-b7a4-3957c0aef82f">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.51033056" folderid="org.eclipse.ui.internal.ViewStack@65293e76" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@5ab6cd7" portletconfigorder="7bbfe706-eef4-4a9c-b179-ef40835bf093">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.4968153" folderid="org.eclipse.ui.internal.ViewStack@3f314b70" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@754a0b6f" portletconfigorder="74042ab7-1e18-4bb1-8841-080b0e33900f">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" rightaxistimeframeoffsetunit="MILLISECONDS" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@5ab6cd7" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="a32d9cbd-d1f5-42f3-94c5-51a0f4f1ee34" addfilterinfo="false" source="server://dtw124701n02" rightaxistimeframeoffset="0" description="" name="ALTER" typeid="com.dynatrace.diagnostics.portlets.chart.DualAxisChart" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <datamodelconfig axisboundsmode="AUTO" axisdrawingorder="RIGHT" rightaxisdatascale="1.0" leftaxisdatascale="1.0">
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Time" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="d0110b42-86e7-410a-acfa-8a28151de834" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Database Time ALTER" sourcecolor="RGB(0,128,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time ALTER" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time ALTER" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="ClusteredBarChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Count" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Count" uiunit="ms" groupingvalue="" id="c44e8747-bdde-4184-be7c-23c2a04bd351" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Database Time ALTER" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time ALTER" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time ALTER" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <ccontent enabled="first" ratio="0.5" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" rightaxistimeframeoffsetunit="MILLISECONDS" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@754a0b6f" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="ccceaf71-eda2-40dc-a74a-46e17406a369" addfilterinfo="false" source="server://dtw124701n02" rightaxistimeframeoffset="0" description="" name="SELECT" typeid="com.dynatrace.diagnostics.portlets.chart.DualAxisChart" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <datamodelconfig axisboundsmode="AUTO" axisdrawingorder="RIGHT" rightaxisdatascale="1.0" leftaxisdatascale="1.0">
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Time" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="397b97b1-6ffc-4076-9474-fbfa0a57a633" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Database Time SELECT" sourcecolor="RGB(0,128,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time SELECT" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time SELECT" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="ClusteredBarChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Count" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Count" uiunit="ms" groupingvalue="" id="c2cc3f5f-67f1-458e-8521-c3dbf4ad6592" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Database Time SELECT" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time SELECT" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time SELECT" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <ccontent enabled="first" ratio="0.5" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@6d53f7f" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="0ca57052-f85c-4758-8049-8fc65ea15ece" addfilterinfo="false" source="server://dtw124701n02" description="" lastvalue="false" name="Connection Pool Active Count" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="4" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="a8efff22-3b5f-4627-899c-1d70c7d3026e" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Billing Center Connection Pool Active" sourcecolor="RGB(128,64,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="Guidewire" measuretype="JmxMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Billing Center Connection Pool Active" metricgroupkey="Custom JMX" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Billing Center Connection Pool Active" measuretype="JmxMeasure" metrickeyid="Custom JMX Measure" agentname="" metricsimpledisplayname="Custom JMX Measure" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="b0ecec35-f305-48f8-a6b9-340e47485823" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Policy Center Connection Pool Active" sourcecolor="RGB(128,64,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="Guidewire" measuretype="JmxMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Policy Center Connection Pool Active" metricgroupkey="Custom JMX" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Policy Center Connection Pool Active" measuretype="JmxMeasure" metrickeyid="Custom JMX Measure" agentname="" metricsimpledisplayname="Custom JMX Measure" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="2f7176e1-713d-4739-9d00-2371f8f098ea" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Claims Center Connection Pool Active" sourcecolor="RGB(128,64,128,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="AgentOrMonitor" displayrate="10s" unit="number" systemid="Guidewire" measuretype="JmxMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Claims Center Connection Pool Active" metricgroupkey="Custom JMX" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Connection Pool Active" measuretype="JmxMeasure" metrickeyid="Custom JMX Measure" agentname="" metricsimpledisplayname="Custom JMX Measure" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="Measure" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" rightaxistimeframeoffsetunit="MILLISECONDS" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@2bd2da94" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="293855f5-9834-4076-b7a4-3957c0aef82f" addfilterinfo="false" source="server://dtw124701n02" rightaxistimeframeoffset="0" description="" name="Stored Procedure" typeid="com.dynatrace.diagnostics.portlets.chart.DualAxisChart" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <datamodelconfig axisboundsmode="AUTO" axisdrawingorder="RIGHT" rightaxisdatascale="1.0" leftaxisdatascale="1.0">
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Time" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="ea25a24e-9d87-450f-b187-c68ece0b5bc6" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Database Time Stored Procedure" sourcecolor="RGB(0,128,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time Stored Procedure" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time Stored Procedure" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="ClusteredBarChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Count" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Count" uiunit="ms" groupingvalue="" id="e478319c-9f7b-4077-8461-e88aad8fef9e" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Database Time Stored Procedure" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time Stored Procedure" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time Stored Procedure" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <ccontent enabled="first" ratio="0.5" />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@11f6c5d6" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" id="5a963d06-f953-4f42-9725-ee999229bfb9" addfilterinfo="false" source="server://dtw124701n02" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" description="Round trip time calls to the database vs. count of requests." name="Database Time and Volume" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="3" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="12" style="NORMAL" name="Segoe UI" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" rightaxistimeframeoffsetunit="MILLISECONDS" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@3f314b70" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="74042ab7-1e18-4bb1-8841-080b0e33900f" addfilterinfo="false" source="server://dtw124701n02" rightaxistimeframeoffset="0" description="" name="UPDATE" typeid="com.dynatrace.diagnostics.portlets.chart.DualAxisChart" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <datamodelconfig axisboundsmode="AUTO" axisdrawingorder="RIGHT" rightaxisdatascale="1.0" leftaxisdatascale="1.0">
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Time" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="73151410-c9fb-4413-84e7-b0e77c4803d4" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Database Time UPDATE" sourcecolor="RGB(0,128,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time UPDATE" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time UPDATE" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="ClusteredBarChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Count" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Count" uiunit="ms" groupingvalue="" id="95528c33-be0b-4f9f-836b-dd90f6cd57a0" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Database Time UPDATE" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time UPDATE" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time UPDATE" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <ccontent enabled="first" ratio="0.5" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" rightaxistimeframeoffsetunit="MILLISECONDS" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@65293e76" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="7bbfe706-eef4-4a9c-b179-ef40835bf093" addfilterinfo="false" source="server://dtw124701n02" rightaxistimeframeoffset="0" description="" name="INSERT" typeid="com.dynatrace.diagnostics.portlets.chart.DualAxisChart" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <datamodelconfig axisboundsmode="AUTO" axisdrawingorder="RIGHT" rightaxisdatascale="1.0" leftaxisdatascale="1.0">
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Time" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="ms" groupingvalue="" id="a8d6f02a-cd7a-4811-8ee6-3e90fa01b097" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Database Time INSERT" sourcecolor="RGB(0,128,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time INSERT" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time INSERT" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="ClusteredBarChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" orientation="Horizontal" lockyaxis="true" axis.y.title="Count" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Count" uiunit="ms" groupingvalue="" id="2ab96510-342b-4738-809f-aa5442c7a8f2" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="Database Time INSERT" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="JdbcMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Database Time INSERT" metricgroupkey="Database" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Database Time INSERT" measuretype="JdbcMeasure" metrickeyid="Time" agentname="" metricsimpledisplayname="Time" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="true" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <ccontent enabled="first" ratio="0.5" />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>

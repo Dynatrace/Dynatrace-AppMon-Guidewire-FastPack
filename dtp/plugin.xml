@@ -8,9 +8,33 @@
                resource_type="dashboard">
          </resource>
          <resource
-               resource="dashboards/Guidewire_JVM.dashboard.xml"
+               resource="dashboards/Guidewire JVM.dashboard.xml"
                resource_type="dashboard">
          </resource>
+         <resource
+               resource="dashboards/BillingCenter JVM.dashboard.xml"
+               resource_type="dashboard">
+         </resource>
+         <resource
+               resource="dashboards/ClaimCenter New Claim Dashboard.dashboard.xml"
+               resource_type="dashboard">
+         </resource>
+         <resource
+               resource="dashboards/ClaimCenter JVM.dashboard.xml"
+               resource_type="dashboard">
+         </resource>
+         <resource
+               resource="dashboards/Guidewire Application Monitoring Dashboard.dashboard.xml"
+               resource_type="dashboard">
+         </resource>
+         <resource
+               resource="dashboards/Guidewire Database Performance.dashboard.xml"
+               resource_type="dashboard">
+         </resource>
+         <resource
+               resource="dashboards/PolicyCenter JVM.dashboard.xml"
+               resource_type="dashboard">
+         </resource>		 
          <resource
                resource="profiles/Guidewire.profile.xml"
                resource_type="systemProfile">

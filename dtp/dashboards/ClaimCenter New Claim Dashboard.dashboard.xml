@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="6.2.1.1027" date="10/16/15 11:07 AM">
+  <dashboardconfig memento.version="6.2.1.1027" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" localizationenabled="false" sessiontype="live" locationassource="false" suppresssavewarning="false" groupname="" authorname="Richard.Boyd" opendrilldowninnewdashboard="false" sessionid="Guidewire" autoreplacesession="false" modified="2015-10-16T11:07:47-0400" id="480c4238-8239-4db9-a2c9-9ad8fbcb6aef" revision="00000150-7131-49f2-8158-d840d09f74dc" source="server://dtw124701n02" created="2015-10-16T11:07:47-0400" description="" name="ClaimCenter New Claim Dashboard" modifiedbyname="Richard.Boyd" locationascomparesource="false">
+    <reportconfig lines.per.table="100" pagesize="A4" enabled="true" print.legends="true" orientation="portrait" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" optimizeequalcolumns="true" type="PDF" title="" override="false" levels.per.tree="10" description="" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" print.images="true" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion type="and" />
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion type="applications" mode="all" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" showjavascript="true" type="browserpathtype" />
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern text="" match="contains" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern text="" match="contains" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion type="casuemdimension" />
+      <criterion filterinterval="false" intervalend="0" type="dcrumdimension" intervalstart="0" />
+      <criterion isactive="true" analyzeserverpath="true" type="enduserpath" analyzeenduserpath="true" analyzeclienterrors="false" />
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion type="or" />
+      <criterion enduser="false" type="purepaths" mode="all" />
+      <criterion showrendering="true" isactive="false" contenttypegroupsmode="all" javascripttriggersmode="all" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion includemeasurename="true" includeplatform="true" includetestname="true" type="tests" testcategory="UNIT,BROWSER_TIMER,BROWSER_AUTO_TIMER,PERFORMANCE,LOAD,WEB_API" teststatus="FAILED,INVALIDATED,VOLATILE,DEGRADED,IMPROVED,passed" />
+      <criterion includeplatform="true" type="testsoverview" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+      <criterion type="timeframe">
+        <timeframe type="Last 6h" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern text="" match="contains" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern text="" match="contains" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="DEFAULT" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="org.eclipse.ui.internal.ViewStack@1c9561cb" selectionindex="0" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="07ff987f-5480-433b-a96e-e44130cc96a6">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" namefontcolor="255,0,0" inherited="false" namefontsize="12" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.47121033" folderid="org.eclipse.ui.internal.ViewStack@4ffa6216" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@1c9561cb" portletconfigorder="375a3215-0ab0-4f16-beac-05d65b54e66a">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.45333335" folderid="org.eclipse.ui.internal.ViewStack@201b80bf" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@4ffa6216" portletconfigorder="a3ff138e-ae27-45c7-9cdf-dd17025fe32b">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.62601626" folderid="org.eclipse.ui.internal.ViewStack@6dc14426" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@201b80bf" portletconfigorder="c68c3ef6-1b95-404c-ae13-9795ded3a236">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.49625936" folderid="org.eclipse.ui.internal.ViewStack@55358c40" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@1c9561cb" portletconfigorder="e8fbc6e3-1e01-4cdf-8c8e-336912ab3987">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.14572865" folderid="folder" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@1c9561cb" portletconfigorder="af06764c-55ed-4bb9-8caa-3666a2af19f6">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" inherited="false" namefontsize="10" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.34026623" folderid="org.eclipse.ui.internal.ViewStack@69920e3c" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@1c9561cb" portletconfigorder="b0c67b9a-8d9c-4d6c-9016-b3ddb0abe6f2">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" namefontcolor="255,0,0" inherited="false" namefontsize="12" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.49810845" folderid="org.eclipse.ui.internal.ViewStack@79a64158" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@69920e3c" portletconfigorder="3949766f-fc14-4a44-8eef-b3897280c83f">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" namefontcolor="255,0,0" inherited="false" namefontsize="12" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.49748743" folderid="org.eclipse.ui.internal.ViewStack@1b20537e" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@79a64158" portletconfigorder="7be354b1-02c8-423a-a489-564761557863">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" namefontcolor="255,0,0" inherited="false" namefontsize="12" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.49873418" folderid="org.eclipse.ui.internal.ViewStack@42db6890" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@69920e3c" portletconfigorder="d10f702e-8f32-49a7-9e22-df24065fb47c">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" namefontcolor="255,0,0" inherited="false" namefontsize="12" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.4987775" folderid="org.eclipse.ui.internal.ViewStack@461a0371" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@1c9561cb" portletconfigorder="971c9d6e-4ee9-4082-bc76-338b79e7bdc7">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" headertype="CUSTOM" namealignment="CENTER" namefontcolor="255,0,0" inherited="false" namefontsize="12" descriptionfontsize="8" descriptionshow="true" descriptionfontcolor="128,128,128" namefontstyle="BOLD" nameshow="true" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@461a0371" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" id="971c9d6e-4ee9-4082-bc76-338b79e7bdc7" addfilterinfo="false" source="server://dtw124701n02" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" description="" name="Search" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="12" style="NORMAL" name="Segoe UI" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@201b80bf" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="a3ff138e-ae27-45c7-9cdf-dd17025fe32b" addfilterinfo="false" source="server://dtw124701n02" description="" lastvalue="false" name="Server Time" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="false" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="70779a86-e70a-4327-a5ec-b5df785b4431" aggregationtype="Avg" uiunit="s" groupingvalue="" id="808b6712-b473-38e6-a0d8-d531bb29d270" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Policy Retrieve - Server Contribution" sourcecolor="RGB(177,78,207,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="Application" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Claims Center Policy Retrieve (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="Claims Center" agenthost="-" parentkeyid="Claims Center Policy Retrieve (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Policy Retrieve" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;[FNOL" id="a41e24de-ccb5-4f84-8be0-f9b1f4dbc846" fetchmeasurecolor="true" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;Search&quot;" id="bd3f68e5-26ea-432e-b787-845664ea7ec4" fetchmeasurecolor="true" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="6" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;Finish&quot;" id="eae9ede1-cc9b-4977-924c-eb12c88973bc" fetchmeasurecolor="true" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="7ffdf14f-a5e6-482a-8802-6ff4b1d40b5d" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;New Claim&quot;" id="f6a8fac9-7808-3907-afff-b5420816083b" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(90,196,82,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;New Claim&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="eae9ede1-cc9b-4977-924c-eb12c88973bc" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;Finish&quot;" id="0b097820-f1ca-3d02-9ae7-17cca6d47fe6" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(242,217,51,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;Finish&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="a41e24de-ccb5-4f84-8be0-f9b1f4dbc846" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;[FNOL" id="33092963-06dd-3417-af36-f8c8b118889a" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(140,78,3,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;[FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="7b0440ab-c66d-4321-a98e-50440c178a3e" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;FNOL" id="5f13d3f8-38b9-375f-b28a-0c7a5a174ec0" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="s" groupingvalue="" id="70779a86-e70a-4327-a5ec-b5df785b4431" fetchmeasurecolor="true" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Policy Retrieve - Server Contribution" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="Application" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Claims Center Policy Retrieve (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Policy Retrieve (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Policy Retrieve" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="5" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;FNOL" id="7b0440ab-c66d-4321-a98e-50440c178a3e" fetchmeasurecolor="true" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="bd3f68e5-26ea-432e-b787-845664ea7ec4" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;Search&quot;" id="7da69355-579f-30b9-957d-322d13bf5386" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(11,23,76,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;Search&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;New Claim&quot;" id="7ffdf14f-a5e6-482a-8802-6ff4b1d40b5d" fetchmeasurecolor="true" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - Server Contribution" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Server Time;Page Actions;Server Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="685" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usedashboardsourceforcompare="true" folderid="folder" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="af06764c-55ed-4bb9-8caa-3666a2af19f6" addfilterinfo="false" source="server://dtw124701n02" description="" lastvalue="false" name="Count" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="ClusteredBarChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="true" axis.y.show="true" orientation="Horizontal" lockyaxis="false" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="click on &quot;New Claim&quot;" id="8e207ccb-4d1c-4774-804e-a19773819fda" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(90,229,77,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="5" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="click on &quot;[FNOL" id="abde85f5-dcbf-46ff-906f-073ca2ec50dd" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(133,20,20,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="6" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="click on &quot;Finish&quot;" id="e0d17555-fca9-4a91-ae82-5a55d691e7a9" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(222,195,33,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="click on &quot;Search&quot;" id="fd13a7cf-d0be-4f4b-8f51-a47ace6f0735" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(13,54,89,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Count" uiunit="ms" groupingvalue="" id="00e52a6b-7601-4d6d-b3cc-b2be7d10c017" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Claims Center Policy Retrieve - User Action Response Time" sourcecolor="RGB(128,0,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Claims Center Policy Retrieve (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Policy Retrieve (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Policy Retrieve" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Count" uiunit="ms" groupingvalue="click on &quot;FNOL" id="6d748893-fe07-46dc-99c7-43af35a03e75" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(89,47,13,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="ms" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="643" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@69920e3c" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" id="b0c67b9a-8d9c-4d6c-9016-b3ddb0abe6f2" addfilterinfo="false" source="server://dtw124701n02" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" description="" name="Retrieve Policy" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="12" style="NORMAL" name="Segoe UI" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@6dc14426" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="c68c3ef6-1b95-404c-ae13-9795ded3a236" addfilterinfo="false" source="server://dtw124701n02" description="" lastvalue="false" name="Failure Rate (%)" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="MeterChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="true" axis.y.show="true" orientation="Horizontal" lockyaxis="false" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="832af48c-13cc-487f-9ef9-47e880355f63" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="" metricsimpledisplayname="Failed User Action Percentage" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="b86786c0-719f-4353-9790-aee4c4579b50" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="904e3d16-d90e-3fcc-9ce9-39a6f3ffd664" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;Finish&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="b86786c0-719f-4353-9790-aee4c4579b50" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="a0cefce9-0323-374f-9077-9befc2e335d9" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;New Claim&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="5df6a0b9-832e-458e-8881-24e539686b72" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="ad6863ec-8643-36e5-9813-7d72c4c8aa6b" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;New Claim&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="35af2436-07a2-4b7f-a2ab-c55296220e7f" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="b0f0ca8c-0546-389b-aae7-66e49eba6387" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;Finish&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="b86786c0-719f-4353-9790-aee4c4579b50" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="" metricsimpledisplayname="Failed User Action Percentage" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="b86786c0-719f-4353-9790-aee4c4579b50" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="c2c4df8e-a5a7-3a5b-973c-bdd8ad25749f" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;[FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="832af48c-13cc-487f-9ef9-47e880355f63" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="c942407f-01eb-300d-b106-d296c53cfb39" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;New Claim&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="5df6a0b9-832e-458e-8881-24e539686b72" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="cbaa8eaa-ceba-3824-9542-691eced1f0f2" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;[FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="832af48c-13cc-487f-9ef9-47e880355f63" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="d70e6e1b-3d0d-3491-90b3-21ac1a90135e" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;Finish&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="35af2436-07a2-4b7f-a2ab-c55296220e7f" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="e78a81f2-cfea-3e89-b7f8-416eea3399be" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;New Claim&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="eabbf168-957f-4c9a-bea6-ba504683162c" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Policy Retrieve" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="Application" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Policy Retrieve" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Failed Page Action Percentage of Claims Center Policy Retrieve" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="" metricsimpledisplayname="Failed User Action Percentage" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="5df6a0b9-832e-458e-8881-24e539686b72" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="f6a55d0f-2dc9-3890-a7f6-028d19bd04e4" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;Search&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="832af48c-13cc-487f-9ef9-47e880355f63" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="0085f6d5-f1b0-3c67-ad64-e0de39a8508d" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;[FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="832af48c-13cc-487f-9ef9-47e880355f63" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="217283ef-78f4-3786-9d1a-1bd02f87c5b9" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="b86786c0-719f-4353-9790-aee4c4579b50" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="2742b646-563e-34e7-86e4-7c206a739dd5" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;Search&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="832af48c-13cc-487f-9ef9-47e880355f63" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="2afc3987-46e5-3362-b742-6c5ab1d4d2c2" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;Search&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="35af2436-07a2-4b7f-a2ab-c55296220e7f" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="" metricsimpledisplayname="Failed User Action Percentage" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="5df6a0b9-832e-458e-8881-24e539686b72" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="37e4830b-9713-3fdf-8dab-3313ccaa633f" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="b86786c0-719f-4353-9790-aee4c4579b50" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="3828cadf-ef6a-38cf-9c35-b60f4e7a4f6b" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="35af2436-07a2-4b7f-a2ab-c55296220e7f" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="3939bb7a-8896-3510-9f86-444857b8e5cb" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;Search&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="5df6a0b9-832e-458e-8881-24e539686b72" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="4a836442-4ca8-3edb-b451-a35375d8347b" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;Finish&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="35af2436-07a2-4b7f-a2ab-c55296220e7f" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="500f8b80-aeff-3c1f-9a2a-39829b7f3c31" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="false" sessiontype="live" parentid="35af2436-07a2-4b7f-a2ab-c55296220e7f" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="54b1c2a9-74c6-38cf-9459-a015c7c32047" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage">
+              <tag value="click on &quot;[FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="eabbf168-957f-4c9a-bea6-ba504683162c" aggregationtype="Avg" uiunit="percent" groupingvalue="" id="57edf54a-ab06-3d3f-96ee-387d680a1e93" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Policy Retrieve" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="Application" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Policy Retrieve" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="Claims Center" agenthost="-" parentkeyid="Failed Page Action Percentage of Claims Center Policy Retrieve" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="-" metricsimpledisplayname="Failed User Action Percentage" />
+            <displaysourceinfo agenthost="-" measureunit="percent" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="5" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="percent" groupingvalue="click on &quot;Finish&quot;" id="5df6a0b9-832e-458e-8881-24e539686b72" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Failed User Action Percentage of Claims Center Create Claim" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="percent" systemid="Guidewire" measuretype="ErrorDetectionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Failed Page Action Percentage of Claims Center Create Claim" metricgroupkey="Error Detection" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Failed Page Action Percentage of Claims Center Create Claim" measuretype="ErrorDetectionMeasure" metrickeyid="Failed Page Action Percentage" agentname="" metricsimpledisplayname="Failed User Action Percentage" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="581" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@42db6890" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" id="d10f702e-8f32-49a7-9e22-df24065fb47c" addfilterinfo="false" source="server://dtw124701n02" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" description="" name="FNOL Navigation 1/2" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="12" style="NORMAL" name="Segoe UI" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@55358c40" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="e8fbc6e3-1e01-4cdf-8c8e-336912ab3987" addfilterinfo="false" source="server://dtw124701n02" description="" lastvalue="false" name="Avg Response Time" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="false" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="8e207ccb-4d1c-4774-804e-a19773819fda" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;New Claim&quot;" id="8a2e6052-d8bd-326b-8b29-66e904250934" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(90,229,77,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;New Claim&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;New Claim&quot;" id="8e207ccb-4d1c-4774-804e-a19773819fda" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(90,229,77,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="5" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;[FNOL" id="abde85f5-dcbf-46ff-906f-073ca2ec50dd" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(133,20,20,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="e0d17555-fca9-4a91-ae82-5a55d691e7a9" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;Finish&quot;" id="b22265b5-33b1-3009-a649-e93e558ecdf9" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(222,195,33,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;Finish&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="6" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;Finish&quot;" id="e0d17555-fca9-4a91-ae82-5a55d691e7a9" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(222,195,33,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="fd13a7cf-d0be-4f4b-8f51-a47ace6f0735" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;Search&quot;" id="f0a5b8ec-192f-3b27-808d-f9b3fd9520e6" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(13,54,89,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;Search&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;Search&quot;" id="fd13a7cf-d0be-4f4b-8f51-a47ace6f0735" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(13,54,89,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="s" groupingvalue="" id="00e52a6b-7601-4d6d-b3cc-b2be7d10c017" fetchmeasurecolor="true" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Policy Retrieve - User Action Response Time" sourcecolor="RGB(128,0,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Claims Center Policy Retrieve (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Policy Retrieve (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Policy Retrieve" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="abde85f5-dcbf-46ff-906f-073ca2ec50dd" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;[FNOL" id="173b489d-5282-3a7a-9f5d-6f4a50b7e70a" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(133,20,20,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;[FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="6d748893-fe07-46dc-99c7-43af35a03e75" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;FNOL" id="1b0c9ac7-76d5-3460-bf0a-dd8f3de2a985" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(89,47,13,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="s" groupingvalue="click on &quot;FNOL" id="6d748893-fe07-46dc-99c7-43af35a03e75" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(89,47,13,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="643" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1c9561cb" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" id="07ff987f-5480-433b-a96e-e44130cc96a6" addfilterinfo="false" source="server://dtw124701n02" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" description="" name="New Claim" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="12" style="NORMAL" name="Segoe UI" />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@4ffa6216" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Guidewire" id="375a3215-0ab0-4f16-beac-05d65b54e66a" addfilterinfo="false" source="server://dtw124701n02" description="" lastvalue="false" name="Max Response Time" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="1" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion type="btm" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="LineChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="false" axis.y.show="true" orientation="Horizontal" lockyaxis="false" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="8e207ccb-4d1c-4774-804e-a19773819fda" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;New Claim&quot;" id="8a2e6052-d8bd-326b-8b29-66e904250934" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(90,229,77,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;New Claim&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;New Claim&quot;" id="8e207ccb-4d1c-4774-804e-a19773819fda" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(90,229,77,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="5" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;[FNOL" id="abde85f5-dcbf-46ff-906f-073ca2ec50dd" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(133,20,20,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="e0d17555-fca9-4a91-ae82-5a55d691e7a9" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;Finish&quot;" id="b22265b5-33b1-3009-a649-e93e558ecdf9" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(222,195,33,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;Finish&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="6" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;Finish&quot;" id="e0d17555-fca9-4a91-ae82-5a55d691e7a9" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(222,195,33,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="fd13a7cf-d0be-4f4b-8f51-a47ace6f0735" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;Search&quot;" id="f0a5b8ec-192f-3b27-808d-f9b3fd9520e6" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(13,54,89,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;Search&quot;" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;Search&quot;" id="fd13a7cf-d0be-4f4b-8f51-a47ace6f0735" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(13,54,89,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Max" uiunit="s" groupingvalue="" id="00e52a6b-7601-4d6d-b3cc-b2be7d10c017" fetchmeasurecolor="true" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Policy Retrieve - User Action Response Time" sourcecolor="RGB(128,0,64,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Claims Center Policy Retrieve (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Policy Retrieve (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Policy Retrieve" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="abde85f5-dcbf-46ff-906f-073ca2ec50dd" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;[FNOL" id="173b489d-5282-3a7a-9f5d-6f4a50b7e70a" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(133,20,20,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;[FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="6d748893-fe07-46dc-99c7-43af35a03e75" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;FNOL" id="1b0c9ac7-76d5-3460-bf0a-dd8f3de2a985" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(89,47,13,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="true" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="-" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="-" metricsimpledisplayname="Value">
+              <tag value="click on &quot;FNOL" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Claims Center Create Claim" measureunit="ms" agentname="-" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="s" groupingvalue="click on &quot;FNOL" id="6d748893-fe07-46dc-99c7-43af35a03e75" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Claims Center Create Claim - User Action Response Time" sourcecolor="RGB(89,47,13,255)" sourcetype="MEASURE" fetchbaseline="false" dynamicconfig="false" autounit="false" sessionid="Guidewire" groupingcriterion="BTSP1" displayrate="10s" unit="s" systemid="Guidewire" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Name of Page Actions" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" metricgroupkey="Business Transaction Results" collector="" systemid="Guidewire" application="" agenthost="" parentkeyid="Claims Center Create Claim (Page Action Response Time;Page Actions;Page Action PurePath Response Time)" measuretype="TransactionMeasure" metrickeyid="Value" agentname="" metricsimpledisplayname="Value" />
+            <displaysourceinfo agenthost="" transactionname="Claims Center Create Claim" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="16" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="643" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="Up" forcevisible="false" hidden="false" width="100" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true" deploymentevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@79a64158" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" id="3949766f-fc14-4a44-8eef-b3897280c83f" addfilterinfo="false" source="server://dtw124701n02" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" description="" name="FNOL Navigation 2/2" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="12" style="NORMAL" name="Segoe UI" />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1b20537e" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" id="7be354b1-02c8-423a-a489-564761557863" addfilterinfo="false" source="server://dtw124701n02" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="" description="" name="Finish" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" optimizeequalcolumns="true" levels.per.tree="10" override="false" print.images="true" reportposition="2" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="12" style="NORMAL" name="Segoe UI" />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
