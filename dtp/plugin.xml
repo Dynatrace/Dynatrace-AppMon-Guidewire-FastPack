@@ -1,43 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension-point id="com.dynatrace.diagnostics.InstallerContent" name="com.dynatrace.diagnostics.InstallerContent" schema="schema/com.dynatrace.diagnostics.InstallerContent.exsd"/>
    <extension point="com.dynatrace.diagnostics.InstallerContent">
-      <metainfo installer_type="resourcepack" name="Guidewire FastPack">
+      <metainfo installer_type="resourcepack" name="FastPack Resources">
          <resource
                resource="dashboards/Guidewire.dashboard.xml"
                resource_type="dashboard">
+               <instance instance="server"/>
          </resource>
          <resource
                resource="dashboards/Guidewire JVM.dashboard.xml"
                resource_type="dashboard">
+               <instance instance="server"/>
          </resource>
          <resource
                resource="dashboards/BillingCenter JVM.dashboard.xml"
                resource_type="dashboard">
+               <instance instance="server"/>
          </resource>
          <resource
                resource="dashboards/ClaimCenter New Claim Dashboard.dashboard.xml"
                resource_type="dashboard">
+               <instance instance="server"/>
          </resource>
          <resource
                resource="dashboards/ClaimCenter JVM.dashboard.xml"
                resource_type="dashboard">
+               <instance instance="server"/>
          </resource>
          <resource
                resource="dashboards/Guidewire Application Monitoring Dashboard.dashboard.xml"
                resource_type="dashboard">
+               <instance instance="server"/>
          </resource>
          <resource
                resource="dashboards/Guidewire Database Performance.dashboard.xml"
                resource_type="dashboard">
+               <instance instance="server"/>
          </resource>
          <resource
                resource="dashboards/PolicyCenter JVM.dashboard.xml"
                resource_type="dashboard">
+               <instance instance="server"/>
          </resource>		 
          <resource
                resource="profiles/Guidewire.profile.xml"
                resource_type="systemProfile">
+               <instance instance="server"/>
          </resource>
       </metainfo>
    </extension>
